@@ -1,0 +1,169 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#mapcontainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Story Banner styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modalcontent {
+    background: #ceccccec;
+    opacity: 0.85;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-family: "Lekton", monospace;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.18);
+}
+
+.modalcontent p {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.modalh1 {
+    margin: 0 0 16px;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: left;
+    font-family: "Noto Serif SC", serif;
+}
+
+.modalh2 {
+    margin: 0 0 16px;
+    font-size: 35px;
+    text-align: right;
+    font-family: "Noto Serif SC", serif;
+}
+
+.modalbody {
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.modalbtn {
+    margin-top: 16px;
+    width: 100%;
+    background: #282a2b;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-family: "Lekton", monospace;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modalbtn:hover {
+    background: #dc2932;
+}
+/* markers styles */
+.custom-marker {
+ background-image: url('https://cdn-icons-png.flaticon.com/256/701/701606.png');
+  background-color: transparent;
+ background-size: cover;
+  width: 30px;
+  height:30px;
+  cursor: pointer;
+}
+.custom-marker-large {
+ background-image: url('https://cdn-icons-png.flaticon.com/512/1525/1525359.png');
+  background-color: transparent;
+ background-size: cover;
+  width: 30px;
+  height:30px;
+  cursor: pointer;
+}
+.custom-marker-residence{
+ background-image: url('https://cdn-icons-png.flaticon.com/512/6665/6665796.png');
+  background-color: transparent;
+ background-size: cover;
+  width: 20px;
+  height:20px;
+  cursor: pointer;
+}
+/* legend*/ 
+.map-legend {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #222;
+    padding: 12px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.18);
+    font-family: "Lekton", monospace;
+    max-width: 230px;
+    z-index: 1000;
+}
+
+.map-legend .legend-item {
+    position: relative;
+    display: inline-grid;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.map-legend .legend-icon {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.map-legend .legend-icon.legend-marker {
+    background-image: url('https://cdn-icons-png.flaticon.com/256/701/701606.png');
+}
+.map-legend .legend-icon.legend-marker-residence {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/6665/6665796.png');
+    width:15px;
+    height: 15px;
+}
+.map-legend .legend-icon.legend-marker-large {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1525/1525359.png');
+}
+
+/* popup style */
+.mapboxgl-popup-content {
+    font-family: "Lekton", monospace;
+    background: #e1e1e0 !important;
+    border: 1.5px solid #dc2932;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    min-width: 200px;
+}
+.popuph1 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-top:none;
+}
+.popupbody {
+    padding-top:2px;
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 5px;
+}

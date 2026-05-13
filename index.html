@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Global Chinatowns</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@200..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--modal code-->
+    <div id="openingmodal" class="modal">
+        <div class="modalcontent">
+            <h1 class="modalh1">何谓唐人街？</h1>
+            <h2 class="modalh2">What Makes a Chinatown?</h2>
+            <p class="modalbody">
+                Over centuries of migration, Chinese communities have established enclaves known as Chinatowns in cities
+                around the world,
+                on nearly every continent. The history of Chinatowns began in the Tang dynasty in the 10th century,
+                which is reflected in the Chinese names
+                for Chinatowns 唐人街 - the streets of the Tang people.</p>
+            <p class="modalbody"> This map traces all the Chinatowns around the world listed on Wikipedia,
+                tracing these patterns of migrations across the world and the spatial and physical presence that Chinese
+                migrants have
+                left in the cities that they've settled in. But what makes these Chinatowns, Chinatowns? While
+                all of the Chinatowns on these maps are defined by the presence of a substantial presence of Chinese
+                commerce and businesses -
+                and frequently marketed by the cities they belong to as must-see tourist destinations - only some remain
+                (or ever were) residential hubs for Chinese communities.
+            </p>
+            <button class="modalbtn">EXPLORE</button>
+        </div>
+    </div>
+    <div id="mapcontainer">
+        <div class="map-legend" aria-label="Map legend">
+            <div class="legend-item">
+                <span class="legend-icon legend-marker-large"></span>
+                <span>Chinatown with population over 10,000</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-icon legend-marker-residence"></span>
+                <span>Chinatown with population over 10,000 & majority Chinese/Asian</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-icon legend-marker"></span>
+                <span>Other Chinatowns</span>
+            </div>
+        </div>
+    </div>
+    <script src="mapdata/markerdata.js"></script>
+    <script src="map.js"></script>
+
+</body>
+
+</html>
