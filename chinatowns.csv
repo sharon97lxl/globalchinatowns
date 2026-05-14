@@ -1,52 +1,64 @@
-Name,longitude,latitude,City,Country,Year,Century,Population over 10000?,Majority Chinese or Asian population?,Paifang?
-Manhattan Chinatown,-73.996895,40.716474,New York City,United States of America,1870s,19th Century,Yes,No*,No
-Flushing Chinatown,-73.829419,40.758017,New York City,United States of America,1970s ,20th Century,Yes,Yes,No
-Sunset Park Chinatown,-74.005717,40.639353,New York City,United States of America,1980s  ,20th Century,Yes,Yes,Yes
-Boston Chinatown,-71.061645,42.349707,Boston,United States of America,1874,19th Century,No,Yes,Yes
-Chicago Chinatown,-87.634064,41.85049,Chicago,United States of America,1870s ,19th Century,No,Yes,Yes
-Honolulu Chinatown Historic District,-157.862925,21.312281,Honolulu,United States of America,1850s,19th Century,No,No,Yes
-Houston Chinatown,-95.545204,29.70505,Houston,United States of America,1983,20th Century,Yes,Yes,Yes
-Los Angeles Chinatown,-118.23651,34.061636,Los Angeles,United States of America,1938,20th Century,Yes,Yes,Yes
-Philadelphia Chinatown,-75.157492,39.955572,Philadelphia,United States of America,1870s ,19th Century,No,No,Yes
-Old Town Chinatown,-122.674512,45.526003,Portland,United States of America,1905,20th Century,No,No,Yes
-San Francisco Chinatown,-122.406337,37.794263,San Francisco,United States of America,1848,19th Century,Yes,Yes,Yes
-Oakland Chinatown,-122.269457,37.79943,Oakland,United States of America,1850s,19th Century,No,Yes,No
-Seattle Chinatown-International District,-122.324525,47.597536,Seattle,United States of America,1900s,20th Century,No,No,Yes
-Washington D.C. Chinatown,-77.020966,38.900456,Washington D.C.,United States of America,1930s ,20th Century,No,No,Yes
-Calgary Chinatown,-114.065,51.050833,Calgary,Canada,1880s,19th Century,No,Yes,Yes
-Edmonton Chinatown,-113.487,53.555,Edmonton,Canada,1900s,20th Century,No Available Data,No Available Data,Yes
-Quartier Chinois,-73.5608,45.50759,Montreal,Canada,1890s,19th Century,No,No Available Data,Yes
-Ottawa Chinatown,-75.70721,45.41084,Ottawa,Canada,1931,20th Century,Yes,No Available Data,Yes
-Downtown Chinatown,-79.398,43.6529,Toronto,Canada,1950s,20th Century,Yes,No,No
-Vancouver Chinatown,-123.099444,49.28,Vancouver,Canada,1885,19th Century,No,No,Yes
-Victoria Chinatown,-123.367224,48.429391,Victoria,Canada,1858,19th Century,No Available Data,No Available Data,Yes
-Windsor Chinatown,-83,42.301,Windsor,Canada,1961,20th Century,No Available Data,No Available Data,No
-Winnipeg Chinatown,-97.138403,49.901618,Winnipeg,Canada,1910s,20th Century,No,Yes,Yes
-Buenos Aires Barrio Chino,-58.45,-34.557778,Buenos Aires,Argentina,1980s  ,20th Century,No,No,Yes
-La Chinesca,-115.493668,32.662803,Mexicali,Mexico,1918,20th Century,Yes,No Available Data,Yes
-Mexico City Barrio Chino ,-99.1427,19.432,Mexico City,Mexico,1900s,20th Century,No Available Data,No Available Data,Yes
-Honiara Chinatown,159.966397,-9.437953,Honiara,Solomon Islands,1940s,,No Available Data,No Available Data,No
-Adelaide Chinatown,138.5958964,-34.92940737,Adelaide,Australia,1970s ,,No Available Data,No Available Data,Yes
-Brisbane Chinatown,153.0337285,153.0337285333-27.458515246942568,Brisbane,Australia,1980s  ,,No Available Data,No Available Data,Yes
-Gold Coast Chinatown,153.413474,-27.96870554,Gold Coast,Australia,2014,,No*,No Available Data,Yes
-Melbourne Chinatown,144.9668251,-37.81187035,Melbourne,Australia,1850s,,No*,No Available Data,Yes
-Perth Chinatown,115.857276,-31.949021,Perth,Australia,1980s  ,,No Available Data,No Available Data,Yes
-Sydney Chinatown,151.205746,-33.87864859,Sydney,Australia,1920s,,Yes,Yes,Yes
-Tiriti Bazaar,88.355,22.573889,Kolkata,India,1790s,,Yes,No Available Data,No
-Glodok,,,Jakarta,Indonesia,1740,,No Available Data,No Available Data,Yes
-Nankin-machi ???,135.188056,34.688056,Kobe,Japan,1868,,Yes,No Available Data,Yes
-Nagasaki Shinchi Chinatown ???????,129.875833,32.741944,Nagasaki,Japan,1700s,,No Available Data,No Available Data,Yes
-Yokohama Chinatown ?????,,,Yokohama,Japan,1859,,No Available Data,No Available Data,Yes
-Gaya Street,,,Kota Kinabalu,Malaysia,,,No*,No Available Data,Yes
-Petaling Street,,,Kuala Lumpur,Malaysia,1870s,,No*,No Available Data,Yes
-Kampung Cina,,,Kuala Terengganu,Malaysia,16th century,,No*,No Available Data,Yes
-Chinatown Kuching,,,Kuching,Malaysia,Mid-to-late 19th century,,No*,No Available Data,Yes
-Jonker Walk,102.246528,2.196722,Malacca City,Malaysia,17th century,,No*,No Available Data,Yes
-Tayoke Tan ??????? ?????????,,,Yangon,Myanmar,1850s,,No*,No Available Data,Yes
-Binondo,,,Manila,Philippines,1594,,Yes,No Available Data,Yes
-Davao Chinatown,,,Davao,Philippines,2004,,No Available Data,No Available Data,Yes
-Singapore Chinatown,,,Singapore,Singapore,1820s,,No,Yes*,Yes
-Incheon Chinatown ???????,126.6181,37.4763,Incheon,Singapore,1884,,No*,No Available Data,Yes
-Bangkok Chinatown,,,Bangkok,Thailand,1860s,,Yes,No Available Data,Yes
-Ch? L?n,,,Ho Chi Minh City,Vietnam,1770s,,Yes*,No Available Data,No
-Van Wesenbekestraat,,,Antwerp,Belgium,,,,,
+Name,longitude,latitude,City,Country,Year,Century,Population over 10000?,Major regional sources of original Chinatown residents
+Manhattan Chinatown,-73.996895,40.716474,New York City,United States of America,1870s,19th Century,Yes,Guangdong
+Flushing Chinatown,-73.829419,40.758017,New York City,United States of America,1970s ,20th Century,Yes,Fuzhou; Zhejiang
+Sunset Park Chinatown,-74.005717,40.639353,New York City,United States of America,1980s  ,20th Century,Yes,Fujian
+Boston Chinatown,-71.061645,42.349707,Boston,United States of America,1874,19th Century,No,Guangdong
+Chicago Chinatown,-87.634064,41.85049,Chicago,United States of America,1870s ,19th Century,No,Guangdong
+Honolulu Chinatown Historic District,-157.862925,21.312281,Honolulu,United States of America,1850s,19th Century,No,Guangdong
+Houston Chinatown,-95.545204,29.70505,Houston,United States of America,1983,20th Century,Yes,Insufficient information
+Los Angeles Chinatown,-118.23651,34.061636,Los Angeles,United States of America,1938,20th Century,Yes,Guangdong
+Philadelphia Chinatown,-75.157492,39.955572,Philadelphia,United States of America,1870s ,19th Century,No,Guangdong
+Old Town Chinatown,-122.674512,45.526003,Portland,United States of America,1905,20th Century,No,Guangdong
+San Francisco Chinatown,-122.406337,37.794263,San Francisco,United States of America,1848,19th Century,Yes,Guangdong
+Oakland Chinatown,-122.269457,37.79943,Oakland,United States of America,1850s,19th Century,No,Guangdong
+Seattle Chinatown-International District,-122.324525,47.597536,Seattle,United States of America,1900s,20th Century,No,Guangdong
+Washington D.C. Chinatown,-77.020966,38.900456,Washington D.C.,United States of America,1930s ,20th Century,No,Guangdong
+Calgary Chinatown,-114.065,51.050833,Calgary,Canada,1880s,19th Century,No,Guangdong
+Edmonton Chinatown,-113.487,53.555,Edmonton,Canada,1900s,20th Century,No Available Data,Guangdong
+Quartier Chinois,-73.5608,45.50759,Montreal,Canada,1890s,19th Century,No,Guangdong
+Ottawa Chinatown,-75.70721,45.41084,Ottawa,Canada,1931,20th Century,Yes,Guangdong
+Downtown Chinatown,-79.398,43.6529,Toronto,Canada,1960s,20th Century,Yes,Guangdong
+Vancouver Chinatown,-123.099444,49.28,Vancouver,Canada,1885,19th Century,No,Guangdong
+Victoria Chinatown,-123.367224,48.429391,Victoria,Canada,1858,19th Century,No Available Data,Guangdong
+Windsor Chinatown,-83,42.301,Windsor,Canada,1961,20th Century,No Available Data,Guangdong
+Winnipeg Chinatown,-97.138403,49.901618,Winnipeg,Canada,1910s,20th Century,No,Guangdong
+Buenos Aires Barrio Chino,-58.45,-34.557778,Buenos Aires,Argentina,1980s  ,20th Century,No,Fujian
+La Chinesca,-115.493668,32.662803,Mexicali,Mexico,1918,20th Century,Yes,Guangdong
+Mexico City Barrio Chino ,-99.1427,19.432,Mexico City,Mexico,1900s,20th Century,No Available Data,Guangdong
+Honiara Chinatown,159.966397,-9.437953,Honiara,Solomon Islands,1940s,20th Century,No Available Data,Guangdong
+Adelaide Chinatown,138.5958964,-34.92940737,Adelaide,Australia,1970s,20th Century,No Available Data,Vietnam*
+Brisbane Chinatown,153.0337285,-27.45851525,Brisbane,Australia,1980s,20th Century,No Available Data,Guangdong
+Gold Coast Chinatown,153.413474,-27.96870554,Gold Coast,Australia,2014,21st Century,No*,Insufficient information
+Melbourne Chinatown,144.9668251,-37.81187035,Melbourne,Australia,1850s,19th Century,No*,Guangdong
+Perth Chinatown,115.857276,-31.949021,Perth,Australia,1980s,20th Century,No Available Data,Guangdong
+Sydney Chinatown,151.205746,-33.87864859,Sydney,Australia,1920s,20th Century,Yes,Guangdong
+Tiriti Bazaar,88.355,22.573889,Kolkata,India,1790s,18th Century,Yes,Hakka
+Glodok,106.8164227,-6.141673127,Jakarta,Indonesia,1740,18th Century,No Available Data,Guangdong; Fujian
+Nankin-machi,135.188056,34.688056,Kobe,Japan,1868,19th Century,Yes,Jiangsu
+Nagasaki Shinchi Chinatown,129.875833,32.741944,Nagasaki,Japan,1700s,18th Century,No Available Data,Fuzhou
+Yokohama Chinatow,139.6447867,35.44329808,Yokohama,Japan,1859,19th Century,No Available Data,Guangdong; Shanghai
+Petaling Street,101.6977247,3.144641492,Kuala Lumpur,Malaysia,1870s,19th Century,No*,Guangdong; Fujian; Hakka
+Kampung Cina,103.132849,5.333428115,Kuala Terengganu,Malaysia,Late 19th Century,19th Century,No*,Fujian
+Kuching Chinatown,110.3491521,1.561787222,Kuching,Malaysia,Mid-to-late 19th century,19th Century,No*,Fujian; Chaoshan; Hainan
+Jonker Walk,102.246528,2.196722,Malacca City,Malaysia,17th century,18th Century,No*,Fujian
+Yangon Chinatown,96.151254,16.773339,Yangon,Myanmar,1850s,19th Century,No*,Guangdong; Fujian
+Binondo,120.9767669,14.59802304,Manila,Philippines,1594,16th Century,Yes,Fujian
+Davao Chinatown,125.6272513,7.079340975,Davao,Philippines,2004,21st Century,No Available Data,Fujian
+Singapore Chinatown,103.8448509,1.281491464,Singapore,Singapore,1820s,19th Century,No,Guangdong; Fujian; Hakka
+Incheon Chinatown,126.6181,37.4763,Incheon,South Korea,1884,19th Century,No*,Shandong
+Bangkok Chinatown,100.5103488,13.7403018,Bangkok,Thailand,1860s,19th Century,Yes,Chaoshan
+Cho Lon,106.6576545,10.75576097,Ho Chi Minh City,Vietnam,1770s,18th Century,Yes*,Guangdong; Fujian; Chaoshan; Hainan; Hakka
+Van Wesenbekestraat,4.420765321,51.22006028,Antwerp,Belgium,,20th Century,,Guangdong
+Chinatown Milan,9.177225,45.481529,Milan,Italy,1920s,20th Century,,Zhejiang
+Quartier Asiatique,2.362546662,48.82380128,Paris,France,1980s  ,20th Century,,Vietnam*
+Zeedijk,4.900289787,52.37392953,Amsterdam,Netherlands,1911,20th Century,,Guangdong
+The Hague's Chinatown,4.315620583,52.07523695,The Hague,Netherlands,1970s ,20th Century,,Guangdong
+Usera,-3.706115,40.384455,Madrid,Spain,2000s,21st Century,,Zhejiang
+Birmingham Chinatown,-1.897275,52.474489,Birmingham,England,1960s,20th Century,,Hong Kong
+Liverpool Chinatown,-2.97712428,53.39968917,Liverpool,England,1890s,19th Century,,Guangdong; Shanghai
+London Chinatown,-0.13085326,51.5127155,London,England,1970s ,20th Century,,Hong Kong
+Manchester Chinatown,-2.240590923,53.47871387,Manchester,England,1950s,20th Century,,Hong Kong
+Newcastle Chinatown,-1.620100919,54.9723168,Newcastler,England,1970s ,20th Century,,Hong Kong
+Barrio Chino Lima,-77.025134,-12.05232,Lima,Peru,1860s,19th Century,,Guangdong
+Commissioner Street,28.0529268,-26.20395729,Johannesburg,South Africa,1900s,20th Century,,Guangdong
+Cyrildene,28.10171835,-26.17475346,Johannesberg,South Africa,2000s,21st Century,,Fujian

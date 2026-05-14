@@ -10,8 +10,27 @@ body {
     height: 100vh;
     position: relative;
 }
-
-/* Story Banner styles */
+/* Header styles*/
+#map-header {
+  display: none;
+position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: rgba(207, 205, 205, 0.92);
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  max-width: 500px;
+  line-height: 10px;
+}
+#map-header h1 {
+  margin: 2px 0 8px 0;
+  font-size: 1.4rem;
+  font-family: "Lekton", monospace;
+  color: black;
+  text-align: center;
+}
+/* Modal styles */
 .modal {
     position: fixed;
     top: 0;
@@ -27,7 +46,6 @@ body {
 .modalcontent {
     background: #ceccccec;
     opacity: 0.85;
-    font-family: Arial, sans-serif;
     padding: 40px;
     max-width: 600px;
     position: relative;
@@ -79,47 +97,69 @@ body {
     background: #dc2932;
 }
 /* markers styles */
-.custom-marker {
- background-image: url('https://cdn-icons-png.flaticon.com/256/701/701606.png');
+.custom-marker-16c{
+ background-image: url('custommarkers/chinese-knot-blue.png');
   background-color: transparent;
  background-size: cover;
-  width: 30px;
-  height:30px;
+  width: 35px;
+  height:35px;
   cursor: pointer;
 }
-.custom-marker-large {
- background-image: url('https://cdn-icons-png.flaticon.com/512/1525/1525359.png');
+.custom-marker-18c{
+ background-image: url('custommarkers/chinese-knot-purple.png');
   background-color: transparent;
  background-size: cover;
-  width: 30px;
-  height:30px;
+  width: 35px;
+  height:35px;
   cursor: pointer;
 }
-.custom-marker-residence{
- background-image: url('https://cdn-icons-png.flaticon.com/512/6665/6665796.png');
+.custom-marker-19c{
+ background-image: url('custommarkers/chinese-knot-red.png');
   background-color: transparent;
  background-size: cover;
-  width: 20px;
-  height:20px;
+  width: 35px;
+  height:35px;
   cursor: pointer;
 }
+.custom-marker-20c{
+ background-image: url('custommarkers/chinese-knot-gold.png');
+  background-color: transparent;
+ background-size: cover;
+  width: 35px;
+  height:35px;
+  cursor: pointer;
+}
+.custom-marker-21c{
+ background-image: url('custommarkers/chinese-knot-green.png');
+  background-color: transparent;
+ background-size: cover;
+  width: 35px;
+  height:35px;
+  cursor: pointer;
+}
+
 /* legend*/ 
 .map-legend {
+    display: none;
     position: absolute;
     right: 20px;
     bottom: 30px;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(207, 205, 205, 0.92);
     color: #222;
     padding: 12px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.18);
     font-family: "Lekton", monospace;
-    max-width: 230px;
+    max-width: 200px;
     z-index: 1000;
 }
-
+.map-legend .legend-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 .map-legend .legend-item {
-    position: relative;
-    display: inline-grid;
+    position: flex;
+    display: flex;
     gap: 10px;
     margin-bottom: 8px;
 }
@@ -134,16 +174,21 @@ body {
     border-radius: 50%;
 }
 
-.map-legend .legend-icon.legend-marker {
-    background-image: url('https://cdn-icons-png.flaticon.com/256/701/701606.png');
+/*legend images*/
+.map-legend .legend-icon.legend-marker-16c {
+    background-image: url('custommarkers/chinese-knot-blue.png');
 }
-.map-legend .legend-icon.legend-marker-residence {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/6665/6665796.png');
-    width:15px;
-    height: 15px;
+.map-legend .legend-icon.legend-marker-18c {
+    background-image: url('custommarkers/chinese-knot-purple.png');
 }
-.map-legend .legend-icon.legend-marker-large {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/1525/1525359.png');
+.map-legend .legend-icon.legend-marker-19c {
+    background-image: url('custommarkers/chinese-knot-red.png');
+}
+.map-legend .legend-icon.legend-marker-20c {
+    background-image: url('custommarkers/chinese-knot-gold.png');
+}
+.map-legend .legend-icon.legend-marker-21c {
+    background-image: url('custommarkers/chinese-knot-green.png');
 }
 
 /* popup style */
@@ -167,3 +212,4 @@ body {
     line-height: 1;
     margin-top: 5px;
 }
+/*Hidden content */

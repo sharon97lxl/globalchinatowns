@@ -3,12 +3,17 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm9uOTdsaSIsImEiOiJjbW5pM2I4YXgwOTBjMnFwc
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('openingmodal');
   const exploreBtn = document.querySelector('.modalbtn');
-
+  const legend = document.getElementById('legend');
+  const header = document.getElementById('map-header');
   const closeModal = () => {
     modal.style.display = 'none';
   };
-
-  if (exploreBtn) exploreBtn.addEventListener('click', closeModal);
+function clickexplore() {
+  closeModal();
+  legend.style.display = "block";
+  header.style.display = "block";
+}
+  if (exploreBtn) exploreBtn.addEventListener('click', clickexplore);
 });
 //THE MAP
 const map = new mapboxgl.Map({
@@ -40,15 +45,22 @@ const map = new mapboxgl.Map({
 //putting markers on the map
 chinatownsdata.forEach(chinatowns => {
   const el = document.createElement('div');
-  const isLargeAsianPopulation = chinatowns["Population over 10000?"] === "Yes" && chinatowns["Majority Chinese or Asian population?"] === "Yes";
-  const isLargePopulation = chinatowns["Population over 10000?"] === "Yes";
+  const sixteenc = chinatowns["Century"] === "16th Century";
+  const eighteenc = chinatowns["Century"] === "18th Century"
+  const nineteenc = chinatowns["Century"] === "19th Century";
+  const twentiethc = chinatowns["Century"] === "20th Century";
+  const twentyfirstc = chinatowns["Century"] === "21st Century";
 
-  if (isLargeAsianPopulation) {
-    el.className = 'custom-marker custom-marker-residence';
-  } else if (isLargePopulation) {
-    el.className = 'custom-marker custom-marker-large';
-  } else {
-    el.className = 'custom-marker';
+  if (sixteenc) {
+    el.className = 'custom-marker custom-marker-16c';
+  } else if (eighteenc) {
+    el.className = 'custom-marker custom-marker-18c';
+  } else if (nineteenc) {
+    el.className = 'custom-marker custom-marker-19c';
+  } else if (twentiethc) {
+    el.className = 'custom-marker custom-marker-20c';
+  } else if (twentyfirstc) {
+    el.className = 'custom-marker custom-marker-21c';
   }
 
   const popup = new mapboxgl.Popup({
@@ -60,9 +72,7 @@ chinatownsdata.forEach(chinatowns => {
            <p class="popupbody"><b>City:</b> ${chinatowns.City}<br></br>
            <b>Country:</b> ${chinatowns.Country}<br></br>
            <b>Established:</b> ${chinatowns.Year}<br></br>
-           <b>Population over 10,000?</b> ${chinatowns["Population over 10000?"]}<br></br>
-           <b>Majority Chinese or Asian population?</b> ${chinatowns["Majority Chinese or Asian population?"]}<br></br>
-           <b>Paifang?</b> ${chinatowns["Paifang?"]}</p>
+           <b>Major regional sources of migrants:</b> ${chinatowns["Major regional sources of original Chinatown residents"]}<br></br>
        `
   );
 
@@ -81,4 +91,21 @@ chinatownsdata.forEach(chinatowns => {
   el.addEventListener('mouseleave', () => {
     popup.remove();
   });
-});   
+});
+// add province boundaries after the map style has loaded
+//map.on('load', () => {map.addSource("regionalboundaries", {
+// type: "geojson",
+// data: "mapdata/provinces-boundaries.geojson"
+//  });
+
+ // map.addLayer({
+ //   id: "regionalboundariespolygons",
+   // type: "fill",
+    //source: "regionalboundaries",
+    //paint: {
+    //  'fill-color': '#e4414f',
+      //'fill-opacity': 0.35,
+      //'fill-outline-color': '#8b1b23'
+   // }
+ // });
+//});
