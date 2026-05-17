@@ -20,7 +20,7 @@ const chinatownsdata = [
    "Year": "1970s ",
    "Century": "20th Century",
    "Population over 10000?": "Yes",
-   "Major regional sources of original Chinatown residents": "Fuzhou; Zhejiang"
+   "Major regional sources of original Chinatown residents": "Fujian; Zhejiang"
  },
  {
    "Name": "Sunset Park Chinatown",
@@ -364,7 +364,7 @@ const chinatownsdata = [
    "Major regional sources of original Chinatown residents": "Guangdong"
  },
  {
-   "Name": "Tiriti Bazaar",
+   "Name": "Tiriti Bazaar টিরিটি বাজার",
    "longitude": 88.355,
    "latitude": 22.573889,
    "City": "Kolkata",
@@ -386,7 +386,7 @@ const chinatownsdata = [
    "Major regional sources of original Chinatown residents": "Guangdong; Fujian"
  },
  {
-   "Name": "Nankin-machi",
+   "Name": "Nankin-machi 南京町",
    "longitude": 135.188056,
    "latitude": 34.688056,
    "City": "Kobe",
@@ -397,7 +397,7 @@ const chinatownsdata = [
    "Major regional sources of original Chinatown residents": "Jiangsu"
  },
  {
-   "Name": "Nagasaki Shinchi Chinatown",
+   "Name": "Nagasaki Shinchi Chinatown 長崎新地中華街",
    "longitude": 129.875833,
    "latitude": 32.741944,
    "City": "Nagasaki",
@@ -405,10 +405,10 @@ const chinatownsdata = [
    "Year": "1700s",
    "Century": "18th Century",
    "Population over 10000?": "No Available Data",
-   "Major regional sources of original Chinatown residents": "Fuzhou"
+   "Major regional sources of original Chinatown residents": "Fujian"
  },
  {
-   "Name": "Yokohama Chinatow",
+   "Name": "Yokohama Chinatown 横浜中華街",
    "longitude": 139.6447867,
    "latitude": 35.44329808,
    "City": "Yokohama",
@@ -449,7 +449,7 @@ const chinatownsdata = [
    "Year": "Mid-to-late 19th century",
    "Century": "19th Century",
    "Population over 10000?": "No*",
-   "Major regional sources of original Chinatown residents": "Fujian; Chaoshan; Hainan"
+   "Major regional sources of original Chinatown residents": "Fujian; Guangdong; Hainan"
  },
  {
    "Name": "Jonker Walk",
@@ -457,13 +457,13 @@ const chinatownsdata = [
    "latitude": 2.196722,
    "City": "Malacca City",
    "Country": "Malaysia",
-   "Year": "17th century",
+   "Year": "Early 18th century",
    "Century": "18th Century",
    "Population over 10000?": "No*",
    "Major regional sources of original Chinatown residents": "Fujian"
  },
  {
-   "Name": "Yangon Chinatown",
+   "Name": "Yangon Chinatown ရန်ကုန် တရုတ်တန်း",
    "longitude": 96.151254,
    "latitude": 16.773339,
    "City": "Yangon",
@@ -485,7 +485,7 @@ const chinatownsdata = [
    "Major regional sources of original Chinatown residents": "Fujian"
  },
  {
-   "Name": "Davao Chinatown",
+   "Name": "Davao Chinatown, Lungsod Tsina sa Dabaw",
    "longitude": 125.6272513,
    "latitude": 7.079340975,
    "City": "Davao",
@@ -507,7 +507,7 @@ const chinatownsdata = [
    "Major regional sources of original Chinatown residents": "Guangdong; Fujian; Hakka"
  },
  {
-   "Name": "Incheon Chinatown",
+   "Name": "Incheon Chinatown 인천차이나타운",
    "longitude": 126.6181,
    "latitude": 37.4763,
    "City": "Incheon",
@@ -518,7 +518,7 @@ const chinatownsdata = [
    "Major regional sources of original Chinatown residents": "Shandong"
  },
  {
-   "Name": "Bangkok Chinatown",
+   "Name": "Bangkok Chinatown ไชนาทาวน์",
    "longitude": 100.5103488,
    "latitude": 13.7403018,
    "City": "Bangkok",
@@ -526,10 +526,10 @@ const chinatownsdata = [
    "Year": "1860s",
    "Century": "19th Century",
    "Population over 10000?": "Yes",
-   "Major regional sources of original Chinatown residents": "Chaoshan"
+   "Major regional sources of original Chinatown residents": "Guangdong"
  },
  {
-   "Name": "Cho Lon",
+   "Name": "Chợ Lớn",
    "longitude": 106.6576545,
    "latitude": 10.75576097,
    "City": "Ho Chi Minh City",
@@ -537,7 +537,7 @@ const chinatownsdata = [
    "Year": "1770s",
    "Century": "18th Century",
    "Population over 10000?": "Yes*",
-   "Major regional sources of original Chinatown residents": "Guangdong; Fujian; Chaoshan; Hainan; Hakka"
+   "Major regional sources of original Chinatown residents": "Guangdong; Fujian; Hainan; Hakka"
  },
  {
    "Name": "Van Wesenbekestraat",

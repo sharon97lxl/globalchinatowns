@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = () => {
     modal.style.display = 'none';
   };
-function clickexplore() {
-  closeModal();
-  legend.style.display = "block";
-  header.style.display = "block";
-}
+  function clickexplore() {
+    closeModal();
+    legend.style.display = "block";
+    header.style.display = "block";
+  }
   if (exploreBtn) exploreBtn.addEventListener('click', clickexplore);
 });
 //THE MAP
@@ -36,43 +36,40 @@ const map = new mapboxgl.Map({
       theme: "monochrome",
     }
   },
-  projection: 'globe', // display the map as a globe
-  zoom: 3, // initial zoom level, 0 is the world view, higher values zoom in
-  center: [-73.94693, 40.71312] // center the map on this longitude and latitude
+  projection: 'globe', 
+  zoom: 2.5678, 
+  center: [118.393788, 21], 
 });
 
 
-//putting markers on the map
+const chinatownMarkers = [];
+let activeRegionFilter = null;
+let selectedHoverName = null;
+
 chinatownsdata.forEach(chinatowns => {
   const el = document.createElement('div');
-  const sixteenc = chinatowns["Century"] === "16th Century";
-  const eighteenc = chinatowns["Century"] === "18th Century"
-  const nineteenc = chinatowns["Century"] === "19th Century";
-  const twentiethc = chinatowns["Century"] === "20th Century";
-  const twentyfirstc = chinatowns["Century"] === "21st Century";
+  const century = chinatowns["Century"];
 
-  if (sixteenc) {
-    el.className = 'custom-marker custom-marker-16c';
-  } else if (eighteenc) {
-    el.className = 'custom-marker custom-marker-18c';
-  } else if (nineteenc) {
-    el.className = 'custom-marker custom-marker-19c';
-  } else if (twentiethc) {
-    el.className = 'custom-marker custom-marker-20c';
-  } else if (twentyfirstc) {
-    el.className = 'custom-marker custom-marker-21c';
-  }
+  const centuryMap = {
+    "16th Century": "custom-marker-16c",
+    "18th Century": "custom-marker-18c",
+    "19th Century": "custom-marker-19c",
+    "20th Century": "custom-marker-20c",
+    "21st Century": "custom-marker-21c"
+  };
 
-  const popup = new mapboxgl.Popup({
+  el.className = 'custom-marker ' + (centuryMap[century] || 'custom-marker-21c');
+
+  const markpopup = new mapboxgl.Popup({
     offset: 10,
     closeButton: false,
     closeOnClick: false
   }).setHTML(`
            <p class="popuph1"> ${chinatowns.Name}</p>
-           <p class="popupbody"><b>City:</b> ${chinatowns.City}<br></br>
-           <b>Country:</b> ${chinatowns.Country}<br></br>
-           <b>Established:</b> ${chinatowns.Year}<br></br>
-           <b>Major regional sources of migrants:</b> ${chinatowns["Major regional sources of original Chinatown residents"]}<br></br>
+           <p class="popupbody"><b>City:</b> ${chinatowns.City}<br>
+           <b>Country:</b> ${chinatowns.Country}<br>
+           <b>Established:</b> ${chinatowns.Year}<br>
+           <b>Major regional sources of migrants:</b> ${chinatowns["Major regional sources of original Chinatown residents"]}</p>
        `
   );
 
@@ -80,32 +77,120 @@ chinatownsdata.forEach(chinatowns => {
     .setLngLat([chinatowns.longitude, chinatowns.latitude])
     .addTo(map);
 
+  const regions = (chinatowns["Major regional sources of original Chinatown residents"] || "")
+    .split(';')
+    .map(region => region.trim().toLowerCase())
+    .filter(Boolean);
 
-  //pop up event listens
-  // show popup on hover
+  chinatownMarkers.push({ marker, regions });
+
   el.addEventListener('mouseenter', () => {
-    popup.setLngLat([chinatowns.longitude, chinatowns.latitude]).addTo(map);
+    markpopup.setLngLat([chinatowns.longitude, chinatowns.latitude]).addTo(map);
   });
 
-  // hide popup when leaving
   el.addEventListener('mouseleave', () => {
-    popup.remove();
+    markpopup.remove();
   });
 });
-// add province boundaries after the map style has loaded
-//map.on('load', () => {map.addSource("regionalboundaries", {
-// type: "geojson",
-// data: "mapdata/provinces-boundaries.geojson"
-//  });
 
- // map.addLayer({
- //   id: "regionalboundariespolygons",
-   // type: "fill",
-    //source: "regionalboundaries",
-    //paint: {
-    //  'fill-color': '#e4414f',
-      //'fill-opacity': 0.35,
-      //'fill-outline-color': '#8b1b23'
-   // }
- // });
-//});
+function updateChinatownMarkers(filterRegion) {
+  chinatownMarkers.forEach(({ marker, regions }) => {
+    const shouldShow = !filterRegion || regions.includes(filterRegion);
+    marker.getElement().style.display = shouldShow ? '' : 'none';
+  });
+}
+
+function clearRegionFilter() {
+  activeRegionFilter = null;
+  selectedHoverName = null;
+  updateChinatownMarkers(null);
+  if (map.getLayer && map.getLayer('regionalboundaries-hover')) {
+    map.setFilter('regionalboundaries-hover', ['==', ['get', 'name'], '']);
+  }
+}
+
+map.on('load', () => {
+  map.addSource("regionalboundaries", {
+    type: "geojson",
+    data: "mapdata/provinces-boundaries.geojson"
+  });
+
+  map.addLayer({
+    id: "regionalboundariespolygons",
+    type: "fill",
+    source: "regionalboundaries",
+    paint: {
+      'fill-color': '#dc2932',
+      'fill-opacity': 0.4,
+      'fill-outline-color': '#dc2932'
+    }
+  });
+
+  map.addLayer({
+    id: "regionalboundaries-hover",
+    type: "fill",
+    source: "regionalboundaries",
+    paint: {
+      'fill-color': '#dc2932',
+      'fill-opacity': 0.8,
+      'fill-outline-color': '#dc2932'
+    },
+    filter: ['==', ['get', 'name'], '']
+  });
+
+  map.addLayer({
+    id: "regionalboundarieslines",
+    type: "line",
+    source: "regionalboundaries",
+    paint: {
+      'line-color': '#dc2932',
+      'line-width': 1
+    }
+  });
+
+  const hoverPopup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+  });
+
+  map.on('mousemove', 'regionalboundariespolygons', (event) => {
+    map.getCanvas().style.cursor = 'pointer';
+    const hoveredFeature = event.features && event.features[0];
+    if (!hoveredFeature) return;
+
+    const hoverName = (hoveredFeature.properties.name || hoveredFeature.properties.id || '').trim();
+    if (!hoverName) return;
+
+    map.setFilter('regionalboundaries-hover', ['==', ['get', 'name'], hoverName]);
+    hoverPopup.setLngLat(event.lngLat).setHTML(`<p class="popuppolybody">${hoverName}</p>`).addTo(map);
+  });
+
+  map.on('mouseleave', 'regionalboundariespolygons', () => {
+    map.getCanvas().style.cursor = '';
+    map.setFilter('regionalboundaries-hover', ['==', ['get', 'name'], selectedHoverName || '']);
+    hoverPopup.remove();
+  });
+
+  map.on('click', 'regionalboundariespolygons', (event) => {
+    const clickedFeature = event.features && event.features[0];
+    if (!clickedFeature) return;
+
+    const regionNameOriginal = (clickedFeature.properties.name || clickedFeature.properties.id || '').trim();
+    const regionName = regionNameOriginal.toLowerCase();
+    if (!regionName) return;
+
+    activeRegionFilter = activeRegionFilter === regionName ? null : regionName;
+    updateChinatownMarkers(activeRegionFilter);
+
+    // toggle persistent hover highlight for the clicked polygon
+    selectedHoverName = (selectedHoverName === regionNameOriginal) ? null : regionNameOriginal;
+    map.setFilter('regionalboundaries-hover', ['==', ['get', 'name'], selectedHoverName || '']);
+  });
+
+  map.on('click', (event) => {
+    const features = map.queryRenderedFeatures(event.point, { layers: ['regionalboundariespolygons'] });
+    if (!features.length) {
+      clearRegionFilter();
+    }
+  });
+});

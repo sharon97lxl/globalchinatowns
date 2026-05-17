@@ -20,15 +20,22 @@ position: absolute;
   background: rgba(207, 205, 205, 0.92);
   padding: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-  max-width: 500px;
+  max-width: 300px;
   line-height: 10px;
+  font-family: "Lekton", monospace;
 }
 #map-header h1 {
   margin: 2px 0 8px 0;
   font-size: 1.4rem;
-  font-family: "Lekton", monospace;
-  color: black;
   text-align: center;
+  line-height: 0.1;
+  padding-top: 10px;
+}
+.headerbody {
+  font-size: 15px;
+  text-align: left;
+  line-height: 1;
+  padding-left:5px;
 }
 /* Modal styles */
 .modal {
@@ -98,43 +105,43 @@ position: absolute;
 }
 /* markers styles */
 .custom-marker-16c{
- background-image: url('custommarkers/chinese-knot-blue.png');
+ background-image: url('custommarkers/knot1.png');
   background-color: transparent;
  background-size: cover;
-  width: 35px;
-  height:35px;
+  width: 25px;
+  height:25px;
   cursor: pointer;
 }
 .custom-marker-18c{
- background-image: url('custommarkers/chinese-knot-purple.png');
+ background-image: url('custommarkers/knot2.png');
   background-color: transparent;
  background-size: cover;
-  width: 35px;
-  height:35px;
+  width: 25px;
+  height:25px;
   cursor: pointer;
 }
 .custom-marker-19c{
- background-image: url('custommarkers/chinese-knot-red.png');
+ background-image: url('custommarkers/knot3.png');
   background-color: transparent;
  background-size: cover;
-  width: 35px;
-  height:35px;
+  width: 25px;
+  height:25px;
   cursor: pointer;
 }
 .custom-marker-20c{
- background-image: url('custommarkers/chinese-knot-gold.png');
+ background-image: url('custommarkers/knot4.png');
   background-color: transparent;
  background-size: cover;
-  width: 35px;
-  height:35px;
+  width: 25px;
+  height:25px;
   cursor: pointer;
 }
 .custom-marker-21c{
- background-image: url('custommarkers/chinese-knot-green.png');
+ background-image: url('custommarkers/knot5.png');
   background-color: transparent;
  background-size: cover;
-  width: 35px;
-  height:35px;
+    width: 25px;
+  height:25px;
   cursor: pointer;
 }
 
@@ -176,19 +183,19 @@ position: absolute;
 
 /*legend images*/
 .map-legend .legend-icon.legend-marker-16c {
-    background-image: url('custommarkers/chinese-knot-blue.png');
+    background-image: url('custommarkers/knot1.png');
 }
 .map-legend .legend-icon.legend-marker-18c {
-    background-image: url('custommarkers/chinese-knot-purple.png');
+    background-image: url('custommarkers/knot2.png');
 }
 .map-legend .legend-icon.legend-marker-19c {
-    background-image: url('custommarkers/chinese-knot-red.png');
+    background-image: url('custommarkers/knot3.png');
 }
 .map-legend .legend-icon.legend-marker-20c {
-    background-image: url('custommarkers/chinese-knot-gold.png');
+    background-image: url('custommarkers/knot4.png');
 }
 .map-legend .legend-icon.legend-marker-21c {
-    background-image: url('custommarkers/chinese-knot-green.png');
+    background-image: url('custommarkers/knot5.png');
 }
 
 /* popup style */
@@ -198,18 +205,23 @@ position: absolute;
     border: 1.5px solid #dc2932;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-    min-width: 200px;
+    min-width: 80px;
+    max-width: fit-content;
 }
 .popuph1 {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    padding-top:none;
 }
 .popupbody {
     padding-top:2px;
     font-size: 12px;
-    line-height: 1;
+    line-height: 1.5;
     margin-top: 5px;
+}
+.popuppolybody {
+    font-size: 12px;
+    text-align: center;
+    line-height: 0.2;
 }
 /*Attribute markers to Freepik https://www.flaticon.com/authors/freepik */
